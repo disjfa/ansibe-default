@@ -1,0 +1,24 @@
+---
+server:
+    install: '1'
+    packages: [npm, git, imagemagick]
+    timezone: UTC
+    locale: nl_NL.UTF-8
+vagrant_local:
+    install: '1'
+    vm: { base_box: trusty64, hostname: default, ip: 192.168.33.99, memory: '1024', sharedfolder: ./, useVagrantCloud: '1', syncType: nfs }
+apache:
+    install: '1'
+    docroot: /home/vagrant
+    servername: myApp.vb
+mysql:
+    install: '1'
+    root_password: '1234'
+    database: db
+    user: user
+    password: password
+    dump: ''
+php:
+    install: '1'
+    packages: [php-cli, php-intl, php-mcrypt, php-mysql]
+
